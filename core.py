@@ -4,10 +4,7 @@ import numpy as np
 import pandas as pd
 import torch
 
-from transformers import RobertaConfig, RobertaModel
-# pretrained roberta model
-configuration = RobertaConfig()
-roberta_model = RobertaModel(configuration)
+roberta_model = torch.hub.load('pytorch/fairseq', 'roberta.large')
 
 from types import (
     TopicSegmentationAlgorithm,
